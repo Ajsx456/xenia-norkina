@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ксения Норкина — миниатюра на эмали</title>
+<meta name="description" content="Ксения Норкина — художник миниатюрной живописи на эмали. Кострома. Броши, кулоны, интерьерные миниатюры в антикварных рамах.">
+<meta property="og:title" content="Ксения Норкина — миниатюра на эмали">
+<meta property="og:description" content="Живопись на эмали: броши, кулоны, интерьерные миниатюры в антикварных рамах.">
+<meta property="og:image" content="img/hero.jpg">
+<meta name="theme-color" content="#0e0c0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e0c0a; --bg2:#16130f; --paper:#ece6da; --ink:#e9e2d4; --muted:#9a9184; --line:rgba(233,226,212,.18);
+  --gold:#b89b6a; --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:15px;line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+/* film grain over everything */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.09;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.lbl{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:lowercase;color:var(--muted)}
+.lbl b{font-weight:400;color:var(--ink)}
+.br::before{content:"[ "}.br::after{content:" ]"}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding:22px 20px 28px;overflow:hidden;isolation:isolate}
+.hero__bg{position:absolute;inset:0;z-index:-1}
+.hero__bg img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;filter:sepia(.25) saturate(.8) brightness(.55);transform:scale(1.08);animation:drift 22s ease-out forwards}
+.hero__bg::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 45%,transparent 20%,rgba(14,12,10,.75) 75%),linear-gradient(to bottom,rgba(14,12,10,.55),transparent 30%,transparent 60%,var(--bg))}
+@keyframes drift{to{transform:scale(1)}}
+.hero__top,.hero__bot{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.hero__mid{text-align:center}
+.hero__kicker{font-family:var(--serif);font-style:italic;font-size:clamp(20px,5vw,30px);font-weight:300;opacity:.92}
+.hero h1{font-family:var(--serif);font-weight:300;text-transform:uppercase;letter-spacing:.02em;line-height:.9;font-size:clamp(52px,15vw,150px);margin:.12em 0 .18em}
+.hero h1 span{display:block}
+.hero__sub{font-family:var(--serif);font-size:clamp(18px,4.4vw,26px);font-weight:400}
+.hero__arrow{display:inline-flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;margin-top:6px}
+.hero__arrow i{width:1px;height:34px;background:var(--ink);opacity:.6;animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{50%{transform:scaleY(.4);transform-origin:top;opacity:.25}}
+.r{text-align:right}
+
+/* ABOUT */
+.about{padding-block:96px 80px}
+.about__grid{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;align-items:center}
+.arch{position:relative;width:min(78vw,380px);margin:0 auto;aspect-ratio:3/4.2;border-radius:999px 999px 0 0;overflow:hidden;outline:1px solid var(--line);outline-offset:10px}
+.arch img{width:100%;height:100%;object-fit:cover;filter:sepia(.15) contrast(1.05)}
+h2{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:clamp(34px,8vw,64px);line-height:1;letter-spacing:.01em}
+.about h2{margin:14px 0 22px}
+.about p{color:#cfc7b8;max-width:52ch}
+.about p+p{margin-top:14px}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(22px,5.4vw,32px);line-height:1.25;color:var(--ink);margin:28px 0 0;padding-left:18px;border-left:1px solid var(--gold);max-width:26ch}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-block:1px solid var(--line);margin-top:56px}
+.facts div{background:var(--bg);padding:18px 6px;text-align:center}
+.facts strong{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(34px,8vw,52px);line-height:1}
+.facts span{font-size:11px;color:var(--muted);letter-spacing:.06em}
+
+/* SECTION HEADS */
+.sec{padding-block:72px}
+.sec__head{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;margin-bottom:40px}
+.sec__num{font-family:var(--serif);font-size:15px;color:var(--gold);letter-spacing:.2em}
+.sec__head p{max-width:46ch;color:var(--muted);font-size:14px}
+.orn{width:120px;height:14px;color:var(--gold);opacity:.7}
+
+/* GALLERY GRID */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{position:relative;min-width:0;cursor:zoom-in;background:var(--bg2);border:0;color:inherit;text-align:left;font:inherit;padding:0}
+.card .ph{overflow:hidden;aspect-ratio:4/5}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.card:hover img{transform:scale(1.04)}
+.card figcaption{padding:10px 2px 2px;font-size:12px;line-height:1.4;color:var(--muted)}
+.card figcaption em{display:block;font-family:var(--serif);font-style:italic;font-size:16px;color:var(--ink)}
+.card.oval .ph{border-radius:50%/50%;aspect-ratio:4/5}
+.card.dome .ph{border-radius:999px 999px 0 0}
+.card.wide{grid-column:1/-1}
+.card.wide .ph{aspect-ratio:3/2}
+
+/* LOVER'S EYE — light panel like reference */
+.eye{background:var(--paper);color:#1c1814;padding:72px 0}
+.eye .sec__head p,.eye .lbl{color:#6d655a}
+.eye .sec__num{color:#8a6f42}
+.eye__row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:center}
+.eye__big{grid-column:1/-1;aspect-ratio:16/10;border-radius:999px;overflow:hidden}
+.eye__big img,.eye__sm img{width:100%;height:100%;object-fit:cover}
+.eye__sm{aspect-ratio:1;border-radius:50%;overflow:hidden;cursor:zoom-in}
+.eye__big{cursor:zoom-in}
+.eye__note{grid-column:1/-1;text-align:center;font-family:var(--serif);font-style:italic;font-size:19px;margin-top:10px}
+
+/* INTERIOR — stacked editorial */
+.inter{display:flex;flex-direction:column;gap:56px}
+.piece{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.piece .ph{overflow:hidden;cursor:zoom-in}
+.piece img{width:100%;height:auto}
+.piece h3{font-family:var(--serif);font-weight:400;font-size:clamp(24px,6vw,34px);line-height:1.1}
+.piece h3 small{display:block;font-style:italic;font-weight:300;font-size:.62em;color:var(--muted);margin-top:4px}
+.piece dl{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;font-size:13px;margin-top:10px;border-top:1px solid var(--line);padding-top:12px}
+.piece dt{color:var(--muted)}
+
+/* PROCESS strip */
+.process{position:relative;min-height:70svh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.process img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;filter:brightness(.5) sepia(.2)}
+.process::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,var(--bg) 5%,transparent 60%)}
+.process .wrap{padding-bottom:48px;width:100%}
+.process p{font-family:var(--serif);font-style:italic;font-size:clamp(24px,6vw,40px);line-height:1.2;max-width:22ch;margin-top:12px}
+
+/* SCROLLER for brooches / jewelry on mobile */
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:78%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 20px 8px;margin:0 -20px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail .card{scroll-snap-align:center}
+.rail-hint{text-align:center;margin-top:14px}
+
+/* CONTACT */
+.contact{padding-block:96px 64px;text-align:center;border-top:1px solid var(--line)}
+.contact h2{margin:14px 0 10px}
+.contact .lead{font-family:var(--serif);font-style:italic;font-size:20px;color:#cfc7b8;max-width:30ch;margin:0 auto 36px}
+.btns{display:grid;gap:10px;max-width:420px;margin:0 auto}
+.btn{display:flex;justify-content:space-between;align-items:center;padding:17px 20px;border:1px solid var(--line);text-decoration:none;font-size:14px;letter-spacing:.04em;transition:background .3s,border-color .3s}
+.btn:hover,.btn:focus-visible{background:rgba(233,226,212,.06);border-color:var(--gold)}
+.btn.main{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.main:hover{background:var(--paper)}
+.btn span:last-child{font-family:var(--serif);font-size:20px;line-height:1}
+.foot{display:flex;justify-content:space-between;gap:10px;padding:40px 20px 28px;max-width:1120px;margin:0 auto}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(8,7,6,.96);display:none;flex-direction:column;align-items:center;justify-content:center;padding:20px;gap:14px}
+.lb.on{display:flex}
+.lb img{max-height:78svh;max-width:100%;object-fit:contain}
+.lb p{text-align:center;font-size:13px;color:var(--muted);max-width:40ch}
+.lb p em{display:block;font-family:var(--serif);font-size:19px;color:var(--ink)}
+.lb button{position:absolute;top:14px;right:14px;background:none;border:1px solid var(--line);color:var(--ink);width:44px;height:44px;font-size:22px;cursor:pointer}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.hero__bg img{animation:none;transform:none}}
+
+@media (min-width:760px){
+  body{font-size:16px}
+  .hero{padding:32px 40px 40px}
+  .wrap{padding:0 40px}
+  .about__grid{grid-template-columns:5fr 6fr;gap:72px}
+  .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+  .card.wide{grid-column:span 2}
+  .eye__row{grid-template-columns:1fr 2fr 1fr}
+  .eye__big{grid-column:2;grid-row:1}
+  .piece{grid-template-columns:7fr 5fr;gap:40px;align-items:end}
+  .piece:nth-child(even) .ph{order:2}
+  .rail{grid-auto-columns:32%;padding:0 40px 8px;margin:0 -40px}
+  .btns{grid-template-columns:1fr 1fr;max-width:620px}
+  .btn.main,.btn:last-child{grid-column:1/-1}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero__bg"><img src="img/hero.jpg" alt="" fetchpriority="high"></div>
+  <div class="hero__top">
+    <div class="lbl">ксения норкина<br>кострома</div>
+    <div class="lbl r">живопись<br>на эмали</div>
+  </div>
+  <div class="hero__mid">
+    <div class="hero__kicker">художник-миниатюрист</div>
+    <h1><span>Ксения</span><span>Норкина</span></h1>
+    <div class="hero__sub">миниатюра на эмали</div>
+  </div>
+  <div class="hero__bot">
+    <div class="lbl">с 2016</div>
+    <a class="hero__arrow lbl" href="#about"><span class="br">смотреть работы</span><i></i></a>
+    <div class="lbl r">2017 — 2026</div>
+  </div>
+</header>
+
+<main>
+<section class="about wrap" id="about">
+  <div class="about__grid">
+    <div class="arch rv"><img src="img/portrait.jpg" alt="Ксения Норкина" loading="lazy"></div>
+    <div class="rv">
+      <div class="lbl br">о художнике</div>
+      <h2>Живопись<br>размером<br>в 20 мм</h2>
+      <p>В 2016 году я пришла учеником на участок финифти завода «Соколов» и полтора года оттачивала технику миниатюры на эмали. С 2018 года писала работы для ювелирной мастерской «Дайко» — для выставок Junwex и Российского Антикварного Салона — и для бренда Russkaya Skazka by Axenoff Jewellery.</p>
+      <p>В 2019 году создала первую брошь на лацкан в коллаборации с издателями журнала «Parisian Gentleman» Соней Глин и Хуго Джакометом. С тех пор пишу миниатюры на заказ для джентльменов со всего мира, сочетаю эмаль с антикварными рамами, а с 2026 года осваиваю роспись по прозрачной горячей эмали на гильошированном серебре.</p>
+      <p class="quote">Великие полотна — в размере, который помещается на лацкане.</p>
+    </div>
+  </div>
+  <div class="facts rv">
+    <div><strong>10</strong><span>лет с эмалью</span></div>
+    <div><strong>20</strong><span>мм — типичный размер</span></div>
+    <div><strong>9</strong><span>лет худ. школы</span></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="mini">
+  <div class="sec__head rv">
+    <div class="sec__num">I</div>
+    <h2>Миниатюры</h2>
+    <svg class="orn" viewBox="0 0 120 14" fill="none" stroke="currentColor" stroke-width=".8"><path d="M0 7h46M74 7h46"/><path d="M60 1c-6 0-8 6-14 6 6 0 8 6 14 6 6 0 8-6 14-6-6 0-8-6-14-6z"/></svg>
+    <p>Броши, кулоны и вставки по мотивам Караваджо, Лейтона, Лемпицкой, Эрте. 2017 — 2026</p>
+  </div>
+  <div class="grid">
+    <figure class="card oval rv"><div class="ph"><img src="img/m1.jpg" alt="" loading="lazy"></div><figcaption><em>The Blue Bird</em>по Ф. К. Каупер, 30×40 мм, 2017</figcaption></figure>
+    <figure class="card dome rv"><div class="ph"><img src="img/m3.jpg" alt="" loading="lazy"></div><figcaption><em>Judith</em>по Ж.-Ж. Лефевру, 30×55 мм, 2018</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img src="img/m2.jpg" alt="" loading="lazy"></div><figcaption><em>Flaming June</em>по Ф. Лейтону, 20 мм, 2021</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img src="img/m4.jpg" alt="" loading="lazy"></div><figcaption><em>Santa Teresa de Avila</em>по Т. Лемпицкой, 20 мм, 2021</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img src="img/m9.jpg" alt="" loading="lazy"></div><figcaption><em>Bacchus</em>по Караваджо, 20 мм, 2021</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img src="img/m5.jpg" alt="" loading="lazy"></div><figcaption><em>Erté</em>35×45 мм, 2018</figcaption></figure>
+    <figure class="card oval rv"><div class="ph"><img src="img/m7.jpg" alt="" loading="lazy"></div><figcaption><em>Серебряный кулон</em>22×28 мм, 2025</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img src="img/m10.jpg" alt="" loading="lazy"></div><figcaption><em>Миниатюра</em>20×23 мм, 2025</figcaption></figure>
+    <figure class="card dome rv"><div class="ph"><img src="img/m6.jpg" alt="" loading="lazy"></div><figcaption><em>Опаловая эмаль гильоше</em>роспись, 2026</figcaption></figure>
+  </div>
+</section>
+
+<section class="eye" id="eye">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <div class="sec__num">II</div>
+      <h2>Lover’s eye</h2>
+      <p>Глаз возлюбленного — тайный портрет, традиция георгианской эпохи. Вставки 9, 16, 19, 22 мм и 22×28 мм.</p>
+    </div>
+    <div class="eye__row rv">
+      <div class="eye__big" data-cap="Lover’s eye|миниатюра на эмали"><img src="img/e2.jpg" alt="" loading="lazy"></div>
+      <div class="eye__sm" data-cap="Lover’s eye|вставка"><img src="img/e1.jpg" alt="" loading="lazy"></div>
+      <div class="eye__sm" data-cap="Lover’s eye|вставка 18×23 мм"><img src="img/e3.jpg" alt="" loading="lazy"></div>
+      <div class="eye__note">портрет, который узнает только один человек</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" id="interior">
+  <div class="sec__head rv">
+    <div class="sec__num">III</div>
+    <h2>Интерьерная<br>эмаль</h2>
+    <svg class="orn" viewBox="0 0 120 14" fill="none" stroke="currentColor" stroke-width=".8"><path d="M0 7h46M74 7h46"/><path d="M60 1c-6 0-8 6-14 6 6 0 8 6 14 6 6 0 8-6 14-6-6 0-8-6-14-6z"/></svg>
+    <p>Миниатюры в антикварных и винтажных рамах. Несколько работ уже находятся в частных коллекциях.</p>
+  </div>
+  <div class="inter">
+    <article class="piece rv">
+      <div class="ph" data-cap="The Bacchante|по Ж.-Л. Жерому"><img src="img/i1.jpg" alt="" loading="lazy"></div>
+      <div><div class="lbl br">свободная копия</div><h3>The Bacchante<small>по Жану-Леону Жерому</small></h3>
+      <dl><dt>эмаль</dt><dd>60×60 мм</dd><dt>рама</dt><dd>антикварная, Германия, начало XX века, 200×200 мм</dd></dl></div>
+    </article>
+    <article class="piece rv">
+      <div class="ph" data-cap="Иван Царевич на Сером волке|по В. Васнецову"><img src="img/hero.jpg" alt="" loading="lazy"></div>
+      <div><div class="lbl br">копия</div><h3>Иван Царевич на Сером волке<small>по Виктору Васнецову, 1889</small></h3>
+      <dl><dt>эмаль</dt><dd>45×60 мм</dd><dt>рама</dt><dd>винтажная, техника хатам, перламутр</dd></dl></div>
+    </article>
+    <article class="piece rv">
+      <div class="ph" data-cap="Luxite Hosiery|по К. Коулсу Филлипсу"><img src="img/i2.jpg" alt="" loading="lazy"></div>
+      <div><div class="lbl br">иллюстрация 1920-х</div><h3>Luxite Hosiery<small>по Кларенсу Коулсу Филлипсу</small></h3>
+      <dl><dt>эмаль</dt><dd>50 мм</dd><dt>рама</dt><dd>антикварная, итальянская микромозаика, конец XIX века</dd></dl></div>
+    </article>
+    <article class="piece rv">
+      <div class="ph" data-cap="Диптих «Лебеди»|в стиле модерн"><img src="img/i3.jpg" alt="" loading="lazy"></div>
+      <div><div class="lbl br">диптих</div><h3>«Лебеди»<small>в стиле модерн</small></h3>
+      <dl><dt>эмаль</dt><dd>две пластины 45×90 мм</dd></dl></div>
+    </article>
+    <article class="piece rv">
+      <div class="ph" data-cap="Lèvres anonymes|по G. Léonnec"><img src="img/i4.jpg" alt="" loading="lazy"></div>
+      <div><div class="lbl br">обложка La Vie Parisienne</div><h3>Lèvres anonymes<small>по G. Léonnec, 1920-е</small></h3>
+      <dl><dt>эмаль</dt><dd>45 мм</dd><dt>рама</dt><dd>круглая, дуб, 60 мм</dd></dl></div>
+    </article>
+    <article class="piece rv">
+      <div class="ph" data-cap="The Arrow Collar Man|по Дж. К. Лейендекеру"><img src="img/i6.jpg" alt="" loading="lazy"></div>
+      <div><div class="lbl br">свободная копия</div><h3>The Arrow Collar Man<small>по Джозефу Лейендекеру, 1916</small></h3>
+      <dl><dt>рама</dt><dd>антикварная</dd></dl></div>
+    </article>
+  </div>
+</section>
+
+<section class="process">
+  <img src="img/work.jpg" alt="" loading="lazy">
+  <div class="wrap rv">
+    <div class="lbl br">в мастерской</div>
+    <p>Тонкая кисть, огнеупорные краски и десятки обжигов в печи — для одной миниатюры.</p>
+  </div>
+</section>
+
+<section class="sec wrap" id="pins">
+  <div class="sec__head rv">
+    <div class="sec__num">IV</div>
+    <h2>Броши<br>на лацкан</h2>
+    <p>Серебро с палладием, эмаль гильоше производства Владислава Демьяненко, миниатюры 20 мм.</p>
+  </div>
+  <div class="rail">
+    <figure class="card rv"><div class="ph"><img src="img/b1.jpg" alt="" loading="lazy"></div><figcaption><em>Lapel pin</em>серебро, гильоше</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img src="img/b2.jpg" alt="" loading="lazy"></div><figcaption><em>Lapel pin</em>роспись по эмали</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img src="img/b3.jpg" alt="" loading="lazy"></div><figcaption><em>Lapel pin</em>серебро, палладий</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img src="img/b4.jpg" alt="" loading="lazy"></div><figcaption><em>Lapel pin</em>миниатюра 20 мм</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img src="img/b5.jpg" alt="" loading="lazy"></div><figcaption><em>Lapel pin</em>роспись по эмали</figcaption></figure>
+  </div>
+  <div class="rail-hint lbl br">листайте →</div>
+</section>
+
+<section class="sec wrap" id="daiko">
+  <div class="sec__head rv">
+    <div class="sec__num">V</div>
+    <h2>Ювелирные<br>изделия</h2>
+    <p>Миниатюры для мастерской Daiko Jewellery, 2017 — 2024. Изделия представлены на Junwex и Российском Антикварном Салоне.</p>
+  </div>
+  <div class="grid">
+    <figure class="card rv"><div class="ph"><img src="img/d1.jpg" alt="" loading="lazy"></div><figcaption><em>«Петрарка и Лаура»</em>золото 585, бриллианты, рубины</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img src="img/d2.jpg" alt="" loading="lazy"></div><figcaption><em>Коллекция «Готика»</em>золото 585, чёрные бриллианты, рубины</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img src="img/d3.jpg" alt="" loading="lazy"></div><figcaption><em>Secret garden</em>коллекция Daiko</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img src="img/d4.jpg" alt="" loading="lazy"></div><figcaption><em>Junwex 2022</em>Daiko Jewellery</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img src="img/d6.jpg" alt="" loading="lazy"></div><figcaption><em>Secret garden</em>серьги с жемчугом</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img src="img/d5.jpg" alt="" loading="lazy"></div><figcaption><em>«Готика»</em>миниатюрная живопись на эмали</figcaption></figure>
+  </div>
+</section>
+
+<section class="contact wrap" id="contact">
+  <div class="lbl br">связаться</div>
+  <h2>Заказать<br>миниатюру</h2>
+  <p class="lead">Пишу на заказ по любимым картинам — броши, кулоны, интерьерные работы.</p>
+  <div class="btns">
+    <a class="btn main" href="https://t.me/xenia_norkina" target="_blank" rel="noopener"><span>Написать в Telegram</span><span>→</span></a>
+    <a class="btn" href="https://wa.me/79607492277" target="_blank" rel="noopener"><span>WhatsApp</span><span>→</span></a>
+    <a class="btn" href="https://vk.com/xenia_norkina" target="_blank" rel="noopener"><span>ВКонтакте</span><span>→</span></a>
+    <a class="btn" href="tel:+79607492277"><span>+7 960 749-22-77</span><span>→</span></a>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="lbl">ксения норкина<br>миниатюра на эмали</div>
+  <div class="lbl r">кострома<br>© 2026</div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр работы">
+  <button type="button" aria-label="Закрыть">×</button>
+  <img alt="">
+  <p></p>
+</div>
+
+<script>
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// lightbox
+const lb=document.getElementById('lb'),li=lb.querySelector('img'),lp=lb.querySelector('p');
+function open(src,t,s){li.src=src;lp.innerHTML=(t?'<em>'+t+'</em>':'')+(s||'');lb.classList.add('on');document.body.style.overflow='hidden'}
+function close(){lb.classList.remove('on');document.body.style.overflow='';li.src=''}
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('click',()=>{
+  const cap=c.querySelector('figcaption'),em=cap&&cap.querySelector('em');
+  open(c.querySelector('img').src,em?em.textContent:'',cap?cap.textContent.replace(em?em.textContent:'',''):'');
+}));
+document.querySelectorAll('[data-cap]').forEach(c=>c.addEventListener('click',()=>{
+  const [t,s]=c.dataset.cap.split('|');open(c.querySelector('img').src,t,s);
+}));
+lb.addEventListener('click',e=>{if(e.target!==li)close()});
+addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+</script>
+</body>
+</html>
