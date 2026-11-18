@@ -118,6 +118,13 @@ h2{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:c
 .rail .card{scroll-snap-align:center}
 .rail-hint{text-align:center;margin-top:14px}
 
+/* BROOCH COLLAGE: big left, small stacked right */
+.pins{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);grid-auto-flow:dense;gap:8px}
+.pin{cursor:zoom-in;overflow:hidden;background:var(--bg2);aspect-ratio:3/4}
+.pin.big{grid-column:1;grid-row:span 2;aspect-ratio:auto}
+.pin img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.pin:hover img{transform:scale(1.04)}
+
 /* CONTACT */
 .contact{padding-block:96px 64px;text-align:center;border-top:1px solid var(--line)}
 .contact h2{margin:14px 0 10px}
@@ -269,7 +276,7 @@ h2{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:c
       <dl><dt>эмаль</dt><dd>45 мм</dd><dt>рама</dt><dd>круглая, дуб, 60 мм</dd></dl></div>
     </article>
     <article class="piece rv">
-      <div class="ph" data-cap="The Arrow Collar Man|по Дж. К. Лейендекеру"><img src="img/i6.jpg" alt="" loading="lazy"></div>
+      <div class="ph" data-cap="The Arrow Collar Man|по Дж. К. Лейендекеру"><img src="img/i6.jpg?v=2" alt="" loading="lazy"></div>
       <div><div class="lbl br">свободная копия</div><h3>The Arrow Collar Man<small>по Джозефу Лейендекеру, 1916</small></h3>
       <dl><dt>рама</dt><dd>антикварная</dd></dl></div>
     </article>
@@ -290,14 +297,14 @@ h2{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:c
     <h2>Броши<br>на лацкан</h2>
     <p>Серебро с палладием, эмаль гильоше производства Владислава Демьяненко, миниатюры 20 мм.</p>
   </div>
-  <div class="rail">
-    <figure class="card rv"><div class="ph"><img src="img/b1.jpg" alt="" loading="lazy"></div><figcaption><em>Lapel pin</em>серебро, гильоше</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/b2.jpg" alt="" loading="lazy"></div><figcaption><em>Lapel pin</em>роспись по эмали</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/b3.jpg" alt="" loading="lazy"></div><figcaption><em>Lapel pin</em>серебро, палладий</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/b4.jpg" alt="" loading="lazy"></div><figcaption><em>Lapel pin</em>миниатюра 20 мм</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/b5.jpg" alt="" loading="lazy"></div><figcaption><em>Lapel pin</em>роспись по эмали</figcaption></figure>
+  <div class="pins rv">
+    <div class="pin big" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img src="img/b1.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
+    <div class="pin" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img src="img/b3.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
+    <div class="pin" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img src="img/b4.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
+    <div class="pin big" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img src="img/b2.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
+    <div class="pin" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img src="img/b5.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
+    <div class="pin" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img src="img/b6.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
   </div>
-  <div class="rail-hint lbl br">листайте →</div>
 </section>
 
 <section class="sec wrap" id="daiko">
