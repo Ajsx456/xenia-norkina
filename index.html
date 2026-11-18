@@ -9,9 +9,8 @@
 <meta property="og:description" content="Живопись на эмали: броши, кулоны, интерьерные миниатюры в антикварных рамах.">
 <meta property="og:image" content="img/hero.jpg">
 <meta name="theme-color" content="#0e0c0a">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/CormorantGaramond-normal-300-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
 :root{
   --bg:#0e0c0a; --bg2:#16130f; --paper:#ece6da; --ink:#e9e2d4; --muted:#9a9184; --line:rgba(233,226,212,.18);
@@ -21,7 +20,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:15px;line-height:1.6;overflow-x:hidden}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 /* film grain over everything */
 body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.09;
@@ -146,8 +145,8 @@ h2{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:c
 .lb button{position:absolute;top:14px;right:14px;background:none;border:1px solid var(--line);color:var(--ink);width:44px;height:44px;font-size:22px;cursor:pointer}
 
 /* reveal */
-.rv{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
-.rv.in{opacity:1;transform:none}
+.rv{opacity:0;transition:opacity .8s ease}
+.rv.in{opacity:1}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.hero__bg img{animation:none;transform:none}}
 
 @media (min-width:760px){
@@ -170,7 +169,7 @@ h2{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:c
 <body>
 
 <header class="hero">
-  <div class="hero__bg"><img src="img/hero.jpg" alt="" fetchpriority="high"></div>
+  <div class="hero__bg"><img width="1200" height="814" src="img/hero.jpg" alt="" fetchpriority="high"></div>
   <div class="hero__top">
     <div class="lbl">ксения норкина<br>кострома</div>
     <div class="lbl r">живопись<br>на эмали</div>
@@ -190,7 +189,7 @@ h2{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:c
 <main>
 <section class="about wrap" id="about">
   <div class="about__grid">
-    <div class="arch rv"><img src="img/portrait.jpg" alt="Ксения Норкина" loading="lazy"></div>
+    <div class="arch rv"><img width="800" height="1200" src="img/portrait.jpg" alt="Ксения Норкина" loading="lazy"></div>
     <div class="rv">
       <div class="lbl br">о художнике</div>
       <h2>Живопись<br>размером<br>в 20 мм</h2>
@@ -214,21 +213,22 @@ h2{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:c
     <p>Броши, кулоны и вставки по мотивам Караваджо, Лейтона, Лемпицкой, Эрте. 2017 — 2026</p>
   </div>
   <div class="grid">
-    <figure class="card oval rv"><div class="ph"><img src="img/m1.jpg" alt="" loading="lazy"></div><figcaption><em>The Blue Bird</em>по Ф. К. Каупер, 30×40 мм, 2017</figcaption></figure>
-    <figure class="card dome rv"><div class="ph"><img src="img/m3.jpg" alt="" loading="lazy"></div><figcaption><em>Judith</em>по Ж.-Ж. Лефевру, 30×55 мм, 2018</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/m2.jpg" alt="" loading="lazy"></div><figcaption><em>Flaming June</em>по Ф. Лейтону, 20 мм, 2021</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/m4.jpg" alt="" loading="lazy"></div><figcaption><em>Santa Teresa de Avila</em>по Т. Лемпицкой, 20 мм, 2021</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/m9.jpg?v=2" alt="" loading="lazy"></div><figcaption><em>Bacchus</em>по Караваджо, 20 мм, 2021</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/m11.jpg" alt="" loading="lazy"></div><figcaption><em>The Extraction of the Stone of Madness</em>фрагмент, по И. Босху, 20 мм</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/m12.jpg" alt="" loading="lazy"></div><figcaption><em>Medusa</em>по Караваджо, 20 мм</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/m13.jpg" alt="" loading="lazy"></div><figcaption><em>Амур и Психея</em>по Ф. Жерару, 20 мм</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/m14.jpg" alt="" loading="lazy"></div><figcaption><em>The Girls</em>фрагмент, по Т. Лемпицкой, 20 мм, 2020</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/m16.jpg" alt="" loading="lazy"></div><figcaption><em>Salvator Mundi</em>по Леонардо да Винчи, 20×20 мм, 2023</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/m15.jpg" alt="" loading="lazy"></div><figcaption><em>Erté</em>20 мм, 2022</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/m5.jpg" alt="" loading="lazy"></div><figcaption><em>Erté</em>35×45 мм, 2018</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/m7.jpg?v=2" alt="" loading="lazy"></div><figcaption><em>Серебряный кулон</em>19×19 мм</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/m10.jpg" alt="" loading="lazy"></div><figcaption><em>Миниатюра</em>20×23 мм, 2025</figcaption></figure>
-    <figure class="card dome rv"><div class="ph"><img src="img/m6.jpg" alt="" loading="lazy"></div><figcaption><em>Роспись на эмали гильоше</em>2026</figcaption></figure>
+    <figure class="card oval rv"><div class="ph"><img width="477" height="606" src="img/m1.jpg" alt="" loading="lazy"></div><figcaption><em>The Blue Bird</em>по Ф. К. Каупер, 30×40 мм, 2017</figcaption></figure>
+    <figure class="card dome rv"><div class="ph"><img width="628" height="848" src="img/m3.jpg" alt="" loading="lazy"></div><figcaption><em>Judith</em>по Ж.-Ж. Лефевру, 30×55 мм, 2018</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="427" height="399" src="img/m2.jpg" alt="" loading="lazy"></div><figcaption><em>Flaming June</em>по Ф. Лейтону, 20 мм, 2021</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="549" height="636" src="img/m4.jpg" alt="" loading="lazy"></div><figcaption><em>Santa Teresa de Avila</em>по Т. Лемпицкой, 20 мм, 2021</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="594" height="985" src="img/m9.jpg?v=2" alt="" loading="lazy"></div><figcaption><em>Bacchus</em>по Караваджо, 20 мм, 2021</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="713" height="845" src="img/m11.jpg" alt="" loading="lazy"></div><figcaption><em>The Extraction of the Stone of Madness</em>фрагмент, по И. Босху, 20 мм</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="622" height="848" src="img/m12.jpg" alt="" loading="lazy"></div><figcaption><em>Medusa</em>по Караваджо, 20 мм</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="681" height="848" src="img/m13.jpg" alt="" loading="lazy"></div><figcaption><em>Амур и Психея</em>по Ф. Жерару, 20 мм</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="858" height="1021" src="img/m14.jpg" alt="" loading="lazy"></div><figcaption><em>The Girls</em>фрагмент, по Т. Лемпицкой, 20 мм, 2020</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="1200" height="1007" src="img/m16.jpg" alt="" loading="lazy"></div><figcaption><em>Salvator Mundi</em>по Леонардо да Винчи, 20×20 мм, 2023</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="669" height="902" src="img/m15.jpg" alt="" loading="lazy"></div><figcaption><em>Erté</em>20 мм, 2022</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="669" height="902" src="img/m5.jpg" alt="" loading="lazy"></div><figcaption><em>Erté</em>35×45 мм, 2018</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="714" height="1065" src="img/m7.jpg?v=2" alt="" loading="lazy"></div><figcaption><em>Серебряный кулон</em>19×19 мм</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="810" height="1200" src="img/m17.jpg" alt="" loading="lazy"></div><figcaption><em>Кулон-сердце</em>серебро, миниатюра на эмали</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="703" height="870" src="img/m10.jpg" alt="" loading="lazy"></div><figcaption><em>Миниатюра</em>20×23 мм, 2025</figcaption></figure>
+    <figure class="card dome rv"><div class="ph"><img width="460" height="558" src="img/m6.jpg" alt="" loading="lazy"></div><figcaption><em>Роспись на эмали гильоше</em>2026</figcaption></figure>
   </div>
 </section>
 
@@ -240,9 +240,9 @@ h2{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:c
       <p>Глаз возлюбленного — тайный портрет, традиция георгианской эпохи. Вставки 9, 16, 19, 22 мм и 22×28 мм.</p>
     </div>
     <div class="eye__row rv">
-      <div class="eye__big" data-cap="Lover’s eye|миниатюра на эмали"><img src="img/e2.jpg" alt="" loading="lazy"></div>
-      <div class="eye__sm" data-cap="Lover’s eye|вставка"><img src="img/e1.jpg" alt="" loading="lazy"></div>
-      <div class="eye__sm" data-cap="Lover’s eye|вставка 18×23 мм"><img src="img/e3.jpg" alt="" loading="lazy"></div>
+      <div class="eye__big" data-cap="Lover’s eye|миниатюра на эмали"><img width="760" height="854" src="img/e2.jpg" alt="" loading="lazy"></div>
+      <div class="eye__sm" data-cap="Lover’s eye|вставка"><img width="338" height="291" src="img/e1.jpg" alt="" loading="lazy"></div>
+      <div class="eye__sm" data-cap="Lover’s eye|вставка 18×23 мм"><img width="295" height="271" src="img/e3.jpg" alt="" loading="lazy"></div>
       <div class="eye__note">портрет, который узнает только один человек</div>
     </div>
   </div>
@@ -257,32 +257,37 @@ h2{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:c
   </div>
   <div class="inter">
     <article class="piece rv">
-      <div class="ph" data-cap="The Bacchante|по Ж.-Л. Жерому"><img src="img/i1.jpg" alt="" loading="lazy"></div>
+      <div class="ph" data-cap="The Bacchante|по Ж.-Л. Жерому"><img width="706" height="1092" src="img/i1.jpg" alt="" loading="lazy"></div>
       <div><div class="lbl br">свободная копия</div><h3>The Bacchante<small>по Жану-Леону Жерому</small></h3>
       <dl><dt>эмаль</dt><dd>60×60 мм</dd><dt>рама</dt><dd>антикварная, Германия, начало XX века, 200×200 мм</dd></dl></div>
     </article>
     <article class="piece rv">
-      <div class="ph" data-cap="Иван Царевич на Сером волке|по В. Васнецову"><img src="img/hero.jpg" alt="" loading="lazy"></div>
+      <div class="ph" data-cap="Иван Царевич на Сером волке|по В. Васнецову"><img width="1200" height="814" src="img/hero.jpg" alt="" loading="lazy"></div>
       <div><div class="lbl br">копия</div><h3>Иван Царевич на Сером волке<small>по Виктору Васнецову, 1889</small></h3>
       <dl><dt>эмаль</dt><dd>45×60 мм</dd><dt>рама</dt><dd>винтажная, техника хатам, перламутр</dd></dl></div>
     </article>
     <article class="piece rv">
-      <div class="ph" data-cap="Luxite Hosiery|по К. Коулсу Филлипсу"><img src="img/i2.jpg" alt="" loading="lazy"></div>
+      <div class="ph" data-cap="Василиса Микулишна|интерьерная миниатюра на эмали"><img width="961" height="1200" src="img/i8.jpg" alt="Василиса Микулишна, миниатюра на эмали в бронзовой раме" loading="lazy"></div>
+      <div><div class="lbl br">интерьерная миниатюра</div><h3>Василиса Микулишна<small>миниатюра на эмали</small></h3>
+      <dl><dt>рама</dt><dd>бронзовая</dd></dl></div>
+    </article>
+    <article class="piece rv">
+      <div class="ph" data-cap="Luxite Hosiery|по К. Коулсу Филлипсу"><img width="1200" height="825" src="img/i2.jpg" alt="" loading="lazy"></div>
       <div><div class="lbl br">иллюстрация 1920-х</div><h3>Luxite Hosiery<small>по Кларенсу Коулсу Филлипсу</small></h3>
       <dl><dt>эмаль</dt><dd>50 мм</dd><dt>рама</dt><dd>антикварная, итальянская микромозаика, конец XIX века</dd></dl></div>
     </article>
     <article class="piece rv">
-      <div class="ph" data-cap="Диптих «Лебеди»|в стиле модерн"><img src="img/i3.jpg" alt="" loading="lazy"></div>
+      <div class="ph" data-cap="Диптих «Лебеди»|в стиле модерн"><img width="1200" height="800" src="img/i3.jpg" alt="" loading="lazy"></div>
       <div><div class="lbl br">диптих</div><h3>«Лебеди»<small>в стиле модерн</small></h3>
       <dl><dt>эмаль</dt><dd>две пластины 45×90 мм</dd></dl></div>
     </article>
     <article class="piece rv">
-      <div class="ph" data-cap="Lèvres anonymes|по G. Léonnec"><img src="img/i4.jpg" alt="" loading="lazy"></div>
+      <div class="ph" data-cap="Lèvres anonymes|по G. Léonnec"><img width="1115" height="1125" src="img/i4.jpg" alt="" loading="lazy"></div>
       <div><div class="lbl br">обложка La Vie Parisienne</div><h3>Lèvres anonymes<small>по G. Léonnec, 1920-е</small></h3>
       <dl><dt>эмаль</dt><dd>45 мм</dd><dt>рама</dt><dd>круглая, дуб, 60 мм</dd></dl></div>
     </article>
     <article class="piece rv">
-      <div class="ph" data-cap="The Arrow Collar Man|по Дж. К. Лейендекеру"><img src="img/i6.jpg?v=2" alt="" loading="lazy"></div>
+      <div class="ph" data-cap="The Arrow Collar Man|по Дж. К. Лейендекеру"><img width="899" height="1125" src="img/i6.jpg?v=3" alt="" loading="lazy"></div>
       <div><div class="lbl br">свободная копия</div><h3>The Arrow Collar Man<small>по Джозефу Лейендекеру, 1916</small></h3>
       <dl><dt>рама</dt><dd>антикварная</dd></dl></div>
     </article>
@@ -290,7 +295,7 @@ h2{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:c
 </section>
 
 <section class="process">
-  <img src="img/work.jpg" alt="" loading="lazy">
+  <img width="1200" height="800" src="img/work.jpg" alt="" loading="lazy">
   <div class="wrap rv">
     <div class="lbl br">в мастерской</div>
     <p>Тонкая кисть, огнеупорные краски и десятки обжигов в печи — для одной миниатюры.</p>
@@ -304,12 +309,12 @@ h2{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:c
     <p>Серебро с палладием, эмаль гильоше производства Владислава Демьяненко, миниатюры 20 мм.</p>
   </div>
   <div class="pins rv">
-    <div class="pin big" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img src="img/b1.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
-    <div class="pin" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img src="img/b3.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
-    <div class="pin" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img src="img/b4.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
-    <div class="pin big" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img src="img/b2.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
-    <div class="pin" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img src="img/b5.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
-    <div class="pin" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img src="img/b6.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
+    <div class="pin big" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img width="749" height="1125" src="img/b1.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
+    <div class="pin" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img width="750" height="1125" src="img/b3.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
+    <div class="pin" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img width="749" height="1125" src="img/b4.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
+    <div class="pin big" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img width="749" height="1125" src="img/b2.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
+    <div class="pin" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img width="749" height="1125" src="img/b5.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
+    <div class="pin" data-cap="Брошь на лацкан|роспись по эмали, серебро, палладий"><img width="750" height="1125" src="img/b6.jpg?v=2" alt="Брошь с миниатюрой на эмали" loading="lazy"></div>
   </div>
 </section>
 
@@ -320,12 +325,12 @@ h2{font-family:var(--serif);font-weight:300;text-transform:uppercase;font-size:c
     <p>Миниатюры для мастерской Daiko Jewellery, 2017 — 2024. Изделия представлены на Junwex и Российском Антикварном Салоне.</p>
   </div>
   <div class="grid">
-    <figure class="card rv"><div class="ph"><img src="img/d1.jpg" alt="" loading="lazy"></div><figcaption><em>«Петрарка и Лаура»</em>золото 585, бриллианты, рубины</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/d2.jpg" alt="" loading="lazy"></div><figcaption><em>Коллекция «Готика»</em>золото 585, чёрные бриллианты, рубины</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/d3.jpg" alt="" loading="lazy"></div><figcaption><em>Secret garden</em>коллекция Daiko</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/d4.jpg" alt="" loading="lazy"></div><figcaption><em>Junwex 2022</em>Daiko Jewellery</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/d6.jpg" alt="" loading="lazy"></div><figcaption><em>Secret garden</em>серьги с жемчугом</figcaption></figure>
-    <figure class="card rv"><div class="ph"><img src="img/d5.jpg" alt="" loading="lazy"></div><figcaption><em>«Готика»</em>миниатюрная живопись на эмали</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="444" height="444" src="img/d1.jpg" alt="" loading="lazy"></div><figcaption><em>«Петрарка и Лаура»</em>золото 585, бриллианты, рубины</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="500" height="500" src="img/d2.jpg" alt="" loading="lazy"></div><figcaption><em>Коллекция «Готика»</em>золото 585, чёрные бриллианты, рубины</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="526" height="526" src="img/d3.jpg" alt="" loading="lazy"></div><figcaption><em>Secret garden</em>коллекция Daiko</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="517" height="518" src="img/d4.jpg" alt="" loading="lazy"></div><figcaption><em>Junwex 2022</em>Daiko Jewellery</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="500" height="500" src="img/d6.jpg" alt="" loading="lazy"></div><figcaption><em>Secret garden</em>серьги с жемчугом</figcaption></figure>
+    <figure class="card rv"><div class="ph"><img width="483" height="319" src="img/d5.jpg" alt="" loading="lazy"></div><figcaption><em>«Готика»</em>миниатюрная живопись на эмали</figcaption></figure>
   </div>
 </section>
 
